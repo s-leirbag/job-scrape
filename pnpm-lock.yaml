@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      dotenv:
+        specifier: ^16.4.7
+        version: 16.4.7
       puppeteer:
         specifier: ^24.1.0
         version: 24.1.0
@@ -149,6 +152,10 @@ packages:
 
   devtools-protocol@0.0.1380148:
     resolution: {integrity: sha512-1CJABgqLxbYxVI+uJY/UDUHJtJ0KZTSjNYJYKqd9FRoXT33WDakDHNxRapMEgzeJ/C3rcs01+avshMnPmKQbvA==}
+
+  dotenv@16.4.7:
+    resolution: {integrity: sha512-47qPchRCykZC03FhkYAhrvwU4xDBFIj1QPqaarj6mdM/hgUzfPHcpkHJOn3mJAufFeeAxAzeGsr5X0M4k6fLZQ==}
+    engines: {node: '>=12'}
 
   emoji-regex@8.0.0:
     resolution: {integrity: sha512-MSjYzcWNOA0ewAHpz0MxpYFvwg6yjy1NG3xteoqz644VCo/RPgnr1/GGt+ic3iJTzQ8Eu3TdM14SawnVUmGE6A==}
@@ -558,6 +565,8 @@ snapshots:
       esprima: 4.0.1
 
   devtools-protocol@0.0.1380148: {}
+
+  dotenv@16.4.7: {}
 
   emoji-regex@8.0.0: {}
 

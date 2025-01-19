@@ -1,3 +1,4 @@
+import 'dotenv/config';
 import puppeteer from "puppeteer";
 
 const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
@@ -89,15 +90,13 @@ async function fillJobForm(
   await browser.close();
 }
 
+const searchQueries = process.env.SEARCH_QUERIES.split(",");
+const locations = process.env.LOCATIONS.split(",");
+const sites = process.env.SITES.split(",");
+const fileType = process.env.FILE_TYPE;
+
 try {
-  await fillJobForm(
-    // ["***REMOVED***"],
-    // ["***REMOVED***", "***REMOVED***"],
-    ["***REMOVED***", "***REMOVED***"],
-    ["***REMOVED***", "***REMOVED***", "***REMOVED***"],
-    ["***REMOVED***", "***REMOVED***", "***REMOVED***"],
-    "excel"
-  );
+  await fillJobForm(searchQueries, locations, sites, fileType);
 } catch (error) {
   console.error("Error:", error);
 }
